@@ -13,18 +13,10 @@ public class LoginPage {
     ChromeDriver driver;
 
     public LoginPage(ChromeDriver driver) {
-
         this.driver = driver;
         PageFactory.initElements(this.driver,this);
     }
 
-    public WebElement installerLoginButtonElement() {
-        return driver.findElement(By.xpath("//button[@class='ant-typography WelcomePage_descriptionText__2Qt5y'] and @text='Login as an Installer'"));
-    }
-
-    public WebElement installerLogin(){
-        return driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]"));
-    }
     @FindBy(xpath = "//body/div[@id='root']/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/button[1]")
     WebElement installerBtn;
 
@@ -35,12 +27,8 @@ public class LoginPage {
         acceptCookie.click();
     }
 
-
     public void clickInstallerBtn(){
         installerBtn.click();
     }
-
-
-
 
 }
